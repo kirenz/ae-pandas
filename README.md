@@ -1,9 +1,67 @@
 # Pandas-Übungen
 
-Data Analytics WS 2026/27.
+Data Analytics · WS 2026/27
 
-Die Notebooks führen vom Einlesen über Spalten und Datentypen zu Kennzahlen, Auswahl und Filtern.
+Die sechs Notebooks führen vom Einlesen zu gezielten Abfragen. Die Übungen bauen in dieser Reihenfolge aufeinander auf:
 
-Die ursprüngliche Notebook-Reihenfolge bleibt erhalten. Grundlage: data-analytics-ws2425/ae-pandas.
+| Notebook | Aufgabe |
+|---|---|
+| `1_import_store.ipynb` | Tabelle erstellen, CSV einlesen und Excel-Datei speichern |
+| `2_columns.ipynb` | Spaltennamen prüfen und vereinheitlichen |
+| `3_data_types.ipynb` | Datentypen prüfen und umwandeln |
+| `4_statistics.ipynb` | Kennzahlen berechnen und Verteilungen untersuchen |
+| `5_selection.ipynb` | Zeilen und Spalten gezielt auswählen |
+| `6_filter.ipynb` | Bedingungen formulieren und Gruppen bilden |
 
-Die aktuelle Kurswebsite erläutert die [Python-Einrichtung](https://github.com/data-analytics-ws2627/website/blob/main/programming-requirements.qmd). Die Übungen können zunächst in der eingerichteten Laborumgebung geöffnet werden.
+Die CSV-Dateien liegen in `data/`. Ihre Herkunft steht in `data/QUELLEN.md`. Das erste Notebook erzeugt `height.xlsx` als lokale Übungsdatei.
+
+## Eigene Arbeitskopie
+
+1. Auf GitHub „Use this template“ und „Create a new repository“ wählen.
+2. Einen eigenen Repository-Namen vergeben und die Sichtbarkeit „Private“ wählen.
+3. Das eigene Repository mit GitHub Desktop oder dem vorhandenen Git-Werkzeug klonen.
+4. Ein Terminal im geklonten Projektordner öffnen.
+
+Bei einer Zuweisung über GitHub Classroom stattdessen die dort erzeugte Arbeitskopie verwenden.
+
+## Python-Umgebung
+
+Voraussetzung: [uv ist installiert](https://github.com/kirenz/uv-setup#installing-uv). Das Terminal befindet sich im Projektordner.
+
+1. Die festgelegte Umgebung einrichten:
+
+```bash
+uv sync --locked
+```
+
+2. Den Kernel in dieser lokalen Umgebung einrichten:
+
+```bash
+uv run --locked python -m ipykernel install --sys-prefix --name data-analytics --display-name "Python (Data Analytics)"
+```
+
+3. Jupyter Lab starten:
+
+```bash
+uv run --locked jupyter lab
+```
+
+4. Im Notebook den Kernel „Python (Data Analytics)“ auswählen.
+
+Die lokale Umgebung wird in `.venv` angelegt. `pyproject.toml` und `uv.lock` gehören zum Repository; `.venv` bleibt lokal.
+
+## Bearbeitung
+
+1. Das erste Notebook öffnen.
+2. In `NAME` das eigene Kürzel eintragen.
+3. Erklärungen lesen und Zellen mit `# YOUR CODE HERE` bearbeiten.
+4. `raise NotImplementedError()` jeweils durch den eigenen Code ersetzen.
+5. Die vorhandenen Prüfzellen ausführen.
+6. Nach Abschluss den Kernel neu starten und alle Zellen erneut ausführen.
+7. Den bearbeiteten Stand mit einer verständlichen Commit-Nachricht sichern.
+
+Prüfkriterium: Alle Zellen laufen nach vollständiger Bearbeitung ohne Fehler. Die Prüfzellen bleiben unverändert. Vor der Bearbeitung brechen Aufgabenstellen absichtlich mit `NotImplementedError` ab.
+
+Ein Coding-Agent kann einzelne Fehlermeldungen erläutern. Übernommener Code muss verstanden und anhand der Aufgabe geprüft werden. Vorgaben zur Abgabe und zum KI-Einsatz stehen im aktuellen Moodle-Kurs.
+
+Grundlage: die gleichnamige Kursvorlage aus data-analytics-ws2425. Die bisherigen Beispiele und Aufgaben bleiben erhalten.
