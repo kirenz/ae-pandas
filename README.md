@@ -22,9 +22,9 @@ Die CSV-Dateien liegen in `data/`. Ihre Herkunft steht in `data/QUELLEN.md`. Das
 3. Das eigene Repository mit GitHub Desktop oder dem vorhandenen Git-Werkzeug klonen.
 4. Ein Terminal im geklonten Projektordner öffnen.
 
-Bei einer Zuweisung über GitHub Classroom stattdessen die dort erzeugte Arbeitskopie verwenden.
-
 ## Python-Umgebung
+
+Die Projektumgebung verwendet Python 3.14. uv installiert die passende Python-Version bei Bedarf automatisch.
 
 Voraussetzung: [uv ist installiert](https://github.com/kirenz/uv-setup#installing-uv). Das Terminal befindet sich im Projektordner.
 
@@ -37,7 +37,7 @@ uv sync --locked
 2. Den Kernel in dieser lokalen Umgebung einrichten:
 
 ```bash
-uv run --locked python -m ipykernel install --sys-prefix --name data-analytics --display-name "Python (Data Analytics)"
+uv run --locked python -m ipykernel install --sys-prefix --name data-analytics --display-name "Python 3.14 (Data Analytics)"
 ```
 
 3. Jupyter Lab starten:
@@ -46,7 +46,7 @@ uv run --locked python -m ipykernel install --sys-prefix --name data-analytics -
 uv run --locked jupyter lab
 ```
 
-4. Im Notebook den Kernel „Python (Data Analytics)“ auswählen.
+4. Im Notebook den Kernel „Python 3.14 (Data Analytics)“ auswählen.
 
 Die lokale Umgebung wird in `.venv` angelegt. `pyproject.toml` und `uv.lock` gehören zum Repository; `.venv` bleibt lokal.
 
