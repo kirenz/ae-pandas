@@ -62,6 +62,6 @@ Die lokale Umgebung wird in `.venv` angelegt. `pyproject.toml` und `uv.lock` geh
 
 Prüfkriterium: Alle Zellen laufen nach vollständiger Bearbeitung ohne Fehler. Die Prüfzellen bleiben unverändert. Vor der Bearbeitung brechen Aufgabenstellen absichtlich mit `NotImplementedError` ab.
 
-Ein Coding-Agent kann einzelne Fehlermeldungen erläutern. Übernommener Code muss verstanden und anhand der Aufgabe geprüft werden. Vorgaben zur Abgabe und zum KI-Einsatz stehen im aktuellen Moodle-Kurs.
+Die Aufgaben werden selbst gelöst. Ein Coding-Agent im Projektordner erklärt Fehlermeldungen und Begriffe, gibt Hinweise und kommentiert eine fertige eigene Lösung. Die Regeln dafür stehen in `AGENTS.md`. Vorgaben zur Abgabe und zum KI-Einsatz stehen im aktuellen Moodle-Kurs.
 
 Grundlage: die gleichnamige Kursvorlage aus data-analytics-ws2425. Die bisherigen Beispiele und Aufgaben bleiben erhalten.
